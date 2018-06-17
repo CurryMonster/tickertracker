@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">My First App</string>
+
+    <string name="tab_label1">
+        <font size="12">Select Stocks</font>
+    </string>
+    <string name="tab_label2">
+        <font size="10">Calculations</font>
+    </string>
+    <string name="tab_label3">
+        <font size="12">FAQ</font>
+    </string>
+
+    <string-array name="industry">
+        <item>All Industries</item>
+        <item>Finance</item>
+        <item>Technology</item>
+        <item>Energy</item>
+        <item>Healthcare &amp; Biotech</item>
+        <item>Retail</item>
+    </string-array>
+
+    <string-array name="term">
+        <item>Full Year</item>
+        <item>Quarter</item>
+        <item>Trailing Twelve Months</item>
+        <item>Year To Date</item>
+    </string-array>
+
+    <string-array name="sheet">
+        <item>Income Statement</item>
+        <item>Balance Sheet</item>
+        <item>Cash Flow</item>
+    </string-array>
+
+    <string-array name="income_statement">
+        <item>Total Revenue</item>
+        <item>Cost of Revenue</item>
+        <item>Gross Profit</item>
+        <item>Research and Development</item>
+        <item>SGA</item>
+        <item>Total Operating Expenses</item>
+        <item>Total Operating Income</item>
+        <item>Net Income</item>
+    </string-array>
+
+    <string-array name="balance_sheet">
+        <item>Cash &amp; Equivalents</item>
+        <item>Accounts Receivable</item>
+        <item>Inventories</item>
+        <item>Total Current Assets</item>
+        <item>Net PP&amp;E</item>
+        <item>Intangible Assets</item>
+        <item>Total Assets</item>
+        <item>Accounts Payable</item>
+        <item>Short Term Debt</item>
+        <item>Total Current Liabilities</item>
+        <item>Long Term Debt</item>
+        <item>Long Liabilities</item>
+    </string-array>
+
+    <string-array name="cash_flow">
+        <item>Net Income</item>
+        <item>Net Cash From Operating Activities</item>
+        <item>Capital Expenditures</item>
+        <item>Net Cash From Investing Activities</item>
+        <item>Repurchase of Common Equity</item>
+        <item>Net Cash From Financing Activities</item>
+        <item>Net Change in Cash &amp; Equivalents</item>
+    </string-array>
+
+    <string-array name="comparison">
+        <item>Greater Than</item>
+        <item>Equal To</item>
+        <item>Less than</item>
+    </string-array>
+
+</resources>

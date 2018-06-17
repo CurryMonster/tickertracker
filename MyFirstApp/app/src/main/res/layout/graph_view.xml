@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/graph_linearlayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="150dip" />
+
+    <LinearLayout
+        android:id="@+id/frequency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp">
+
+        <Button
+            android:id="@+id/one_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1M"
+            android:textSize="10sp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/three_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3M"
+            android:textSize="10sp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/one_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1Y"
+            android:textSize="10sp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/three_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3Y"
+            android:textSize="10sp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</LinearLayout>

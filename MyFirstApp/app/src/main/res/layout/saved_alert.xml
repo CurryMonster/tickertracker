@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/each_saved_alert"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="#000000"/>
+        <TextView
+            android:id="@+id/name_of_alert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/remove_alert"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Delete"
+            android:textSize="8sp"
+            android:layout_weight="3.5"/>
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="#000000" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000"/>
+
+</LinearLayout>
