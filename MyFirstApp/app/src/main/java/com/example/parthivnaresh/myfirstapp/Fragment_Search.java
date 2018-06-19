@@ -266,22 +266,11 @@ public class Fragment_Search extends Fragment {
             ArrayList<Double> running_values = null;
 
             try {
-                if (period == 1) {
-                    historical_prices = getHistoricalPrices.getOneMonth();
-                    System.out.println("PANDA CASE 1");
-                } else if (period == 2) {
-                    historical_prices = getHistoricalPrices.getThreeMonth();
-                    System.out.println("PANDA CASE 2");
-                } else if (period == 3) {
-                    historical_prices = getHistoricalPrices.getOneYear();
-                    System.out.println("PANDA CASE 3");
-                } else if (period == 4) {
-                    historical_prices = getHistoricalPrices.getThreeYear();
-                    System.out.println("PANDA CASE 4");
-                }
+                historical_prices = getHistoricalPrices.getOneYear();
                 for (int i = historical_prices.length()-1; i>=0; i--) {
                     newJsonArray.put(historical_prices.get(i));
                 }
+
                 series = new LineGraphSeries<>(new DataPoint[] {});
                 running_values = new ArrayList();
                 for (int i = 0; i < newJsonArray.length(); i++) {

@@ -30,9 +30,9 @@ public class APICall_NewsFeed extends JSONObject {
         this.encoding = Base64.getEncoder().encodeToString(userPassword.getBytes());
     }
 
-    public JSONArray getNewsList() throws IOException, JSONException {
+    public JSONArray getNewsList() throws IOException {
         JSONArray newsfeed = jsonParser("10");
-
+        System.out.println(newsfeed.toString() + " PANDA NEWSFEED");
         return newsfeed;
     }
 

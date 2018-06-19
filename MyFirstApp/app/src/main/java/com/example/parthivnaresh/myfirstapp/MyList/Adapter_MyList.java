@@ -3,6 +3,7 @@ package com.example.parthivnaresh.myfirstapp.MyList;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +53,11 @@ public class Adapter_MyList extends RecyclerView.Adapter<Adapter_MyList.myViewHo
             String current_ticker = ticker_list.get(position).getTicker();
             holder.stockticker.setText(current_ticker);
 
+            String current_ticker_company_name = ticker_list.get(position).getCompanyName();
+            holder.stockcompanyname.setText(current_ticker_company_name);
+            holder.stockcompanyname.setSelected(true);
+//            holder.stockcompanyname.setMovementMethod(new ScrollingMovementMethod());
+
             String current_price = ticker_list.get(position).getPrice();
             holder.stockprice.setText("$" + current_price.toString());
 
@@ -89,12 +95,13 @@ public class Adapter_MyList extends RecyclerView.Adapter<Adapter_MyList.myViewHo
     }
 
     public class myViewHolder extends RecyclerView.ViewHolder {
-        TextView stockticker, stockprice, stockpricechange, stockpercentchange;
+        TextView stockticker, stockcompanyname, stockprice, stockpricechange, stockpercentchange;
         Button moreinfo;
 
         public myViewHolder(View view){
             super(view);
             stockticker = view.findViewById(R.id.each_ticker);
+            stockcompanyname = view.findViewById(R.id.each_company_name);
             stockprice = view.findViewById(R.id.each_price);
             stockpricechange = view.findViewById(R.id.price_change);
             stockpercentchange = view.findViewById(R.id.percent_change);

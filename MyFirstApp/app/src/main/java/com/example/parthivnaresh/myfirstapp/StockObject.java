@@ -7,10 +7,12 @@ public class StockObject {
     private String price_change;
     private String percent_change;
     private String ticker;
+    private String company_name;
     private String price;
 
-    public StockObject (String ticker, String price, String price_change, String percent_change) {
+    public StockObject(String ticker, String company_name, String price, String price_change, String percent_change) {
         this.ticker = ticker;
+        this.company_name = company_name;
         this.price = price;
         this.price_change = price_change;
         this.percent_change = percent_change;
@@ -18,6 +20,14 @@ public class StockObject {
 
     public String getTicker() {
         return this.ticker;
+    }
+
+    public String getCompanyName() {
+        return this.company_name;
+    }
+
+    public String setCompanyName(String company_name) {
+        return this.company_name = company_name;
     }
 
     public String getPrice() {

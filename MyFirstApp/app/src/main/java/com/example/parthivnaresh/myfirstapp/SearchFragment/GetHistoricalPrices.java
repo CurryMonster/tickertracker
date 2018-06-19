@@ -63,7 +63,6 @@ public class GetHistoricalPrices extends JSONObject {
 
         JSONArray one_month_prices = jsonParser(this.year + "-" + current_month + "-" + this.day);
         System.out.println(this.year + "-" + current_month + "-" + this.day + " PANDA ONE MONTH");
-
         return one_month_prices;
     }
 
@@ -94,7 +93,7 @@ public class GetHistoricalPrices extends JSONObject {
 
     private JSONArray jsonParser(String date) throws IOException {
 
-        URL url = new URL(urlBase + this.ticker + "&search_view_layout=close_price&frequency=daily&start_date=" + date);
+        URL url = new URL(urlBase + this.ticker + "&item=adj_close_price&frequency=daily&start_date=" + date);
 
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
         urlConnection.setRequestProperty("Authorization", "Basic " + this.encoding);

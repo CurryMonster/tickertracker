@@ -4,7 +4,9 @@ package com.example.parthivnaresh.myfirstapp;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -15,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -40,12 +43,14 @@ public class Tab_Alerts extends Fragment {
     CustomSpinnerAdapter industry_adapter, term_adapter, sheet_adapter, comparison_adapter, income_statement_adapter,
             balance_sheet_adapter, cash_flow_adapter;
     Spinner industry_list, term_list, sheet_list, metric_list, comparison_list;
+    SeekBar seekBar;
     List<String> industries, terms, sheets, comparisons, income_statement_values, balance_sheet_values, cash_flow_values;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -73,6 +78,7 @@ public class Tab_Alerts extends Fragment {
             metric_list = child.findViewById(R.id.metric_spinner);
             comparison_list = child.findViewById(R.id.comparison_spinner);
             alert_value = child.findViewById(R.id.constraint_value);
+            seekBar = v.findViewById(R.id.simpleSeekBar);
 
             settingAdapters();
 
@@ -103,6 +109,7 @@ public class Tab_Alerts extends Fragment {
                     } else if (alert_value.getText().toString().equals("")) {
                         Toast.makeText(getContext(), "Please enter a value", Toast.LENGTH_SHORT).show();
                     } else {
+                        Toast.makeText(getContext(), "Alert " + alert_name.getText().toString() + " added!", Toast.LENGTH_SHORT).show();
                         writeAlertsToInternal(filename);
                     }
                 } catch (IOException e) {
@@ -113,6 +120,26 @@ public class Tab_Alerts extends Fragment {
             delete_constraint = child.findViewById(R.id.delete_constraint);
             delete_constraint.setOnClickListener(v2 -> {
                 linearLayout.removeView(child);
+            });
+
+            seekBar.setMax(500);
+            seekBar.setMin(-500);
+
+            seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                @Override
+                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                    alert_value.setText(String.valueOf(progress));
+                }
+
+                @Override
+                public void onStartTrackingTouch(SeekBar seekBar) {
+
+                }
+
+                @Override
+                public void onStopTrackingTouch(SeekBar seekBar) {
+
+                }
             });
 
         });

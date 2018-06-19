@@ -115,7 +115,7 @@ public class Tab_Search extends Fragment {
                 Graph_Inflater graph_inflater = new Graph_Inflater();
 
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.add(R.id.graph_framelayout, graph_inflater);
+//                fragmentTransaction.add(R.id.graph_framelayout, graph_inflater);
                 fragmentTransaction.commit();
             }
         });

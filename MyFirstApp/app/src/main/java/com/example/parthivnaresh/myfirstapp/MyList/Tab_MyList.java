@@ -74,7 +74,7 @@ public class Tab_MyList extends Fragment {
         rec.setVisibility(v.GONE);
 
         String filename = "StocksList";
-        String first_portfolio = "SNAP, TWLO, TWTR, MU, CLDR, ICHR, AXTI, BEST, MDB, UCTT, ZOES, CGNX, TSRO, MDXG";
+        String first_portfolio = "SNAP, TWLO, TWTR, MU, CLDR, ICHR, AXTI, NXPI, MDB, UCTT, ZOES, CGNX, TSRO, MDXG";
 
         try {
             FileOutputStream outputStream;
@@ -101,7 +101,7 @@ public class Tab_MyList extends Fragment {
 
         StockObject stockObject;
         for (String ticker : ticker_list) {
-            stockObject = new StockObject(ticker, "0.00", "0.00", "0.00");
+            stockObject = new StockObject(ticker, "", "0.00", "0.00", "0.00");
             stockObjectList.add(stockObject);
         }
 
@@ -179,6 +179,7 @@ public class Tab_MyList extends Fragment {
                 dp_call = new APICall_DataPoint(each_ticker.getTicker());
                 try {
                     each_ticker.setPrice(dp_call.getLastPrice());
+                    each_ticker.setCompanyName(dp_call.getCompanyName());
                     each_ticker.setPriceChange(dp_call.getPriceChange());
                     each_ticker.setPercentChange(dp_call.getPercentChange());
                 } catch (IOException e) {

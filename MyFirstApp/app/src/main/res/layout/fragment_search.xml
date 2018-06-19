@@ -97,9 +97,9 @@
             android:maxLines="1" />
     </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/graph_framelayout"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"/>
+    <!--<FrameLayout-->
+        <!--android:id="@+id/graph_framelayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="300dp"/>-->
 
 </LinearLayout>

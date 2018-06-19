@@ -61,7 +61,7 @@ public class Graph_Inflater extends Fragment {
 
                 FragmentTransaction fragmentTransaction = Tab_Search.fragmentManager.beginTransaction();
                 fragmentTransaction.remove(graph_inflater);
-                fragmentTransaction.replace(R.id.graph_framelayout, graph_inflater);
+//                fragmentTransaction.replace(R.id.graph_framelayout, graph_inflater);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
 
